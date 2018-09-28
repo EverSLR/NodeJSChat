@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-12.shadow-sm.p-3.mb-5.bg-white.rounded
+        ul.list-group
+          h2 Chat
+          br
+    .row.fixed-bottom.justify-content-center
+      .col-10
+        .input-group.mb-3
+          <input id="message-text" type="text" class="form-control" placeholder="Enter message" aria-label="Text ..." aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="button" id="send-msg">Send</button>
+          </div>
+        </div>

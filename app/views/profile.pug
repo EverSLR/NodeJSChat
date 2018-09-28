@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  <div class="container"> 
+    <div class='row justify-content-center'>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=#{user.photos} alt="Card image cap">
+        <div class="card-body">
+          h5.card-title #{user.displayName}
+          pre=JSON.stringify(user)
+        </div>
+      </div>
+    </div>
+  </div>  

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  <div class="container"> 
+    <div class='row justify-content-center'>
+      <div class="col-4 shadow-sm p-3 mb-5 bg-white rounded">
+        <form>
+          <div class="form-group">
+            <label for="username-input">Username</label>
+            <input type="text" class="form-control" id="username-input" placeholder="Enter username">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-outline-primary btn-lg btn-block">Login</button>
+          <a href="/auth/spotify" class="btn btn-outline-primary btn-lg btn-block">Login with Spotify</a>
+        </form>
+      </div>
+    </div>
+  </div>  

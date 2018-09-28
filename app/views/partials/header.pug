@@ -1,0 +1,40 @@
+navbar.navbar.navbar-dark(style="background-color: #1db954")
+    ul.nav.justify-content-center
+        li.nav-item
+            a.nav-link(href="/") Home
+        li.nav-item
+            a.nav-link(href="/profile") Profile
+
+        if user 
+            li.nav-item
+                a#logout.nav-link( href="/logout") Logout
+
+            <li class="nav-item">
+                a#userName.nav-link(href="/profile") #{user.displayName}
+
+            if user.photos != ""
+                li.nav-item
+                    img(src=user.photos[0] alt="Photo" height="42" width="42" id="image")
+    
+            else
+                <li class="nav-item">
+                    img(src="/images/user-anon.png" alt="Photo" height="42" width="42" id="image")
+                </li>   
+        else
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                img(src="/images/user-anon.png" alt="Photo" height="42" width="42" id="image")
+            </li>   
+
+
+
+            //- h1=appTitle
+    //- ul.menu
+        //- li 
+        //-     a(href="/") Home
+        //- li 
+        //-     a(href="/profile") Profile
+        //- li
+        //-     a(href="/login") Login
